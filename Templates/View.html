@@ -1,0 +1,10 @@
+
+<head>
+    <title>{{post["title"]}}(post_id:{{post["id"]}})</title>
+</head>
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 style="text-align:center">{{post["title"]}}</h2>
+<p>{{post["content"]}}</p>
+{% endblock %}

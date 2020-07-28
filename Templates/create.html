@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form method="POST">
+    <h2 style="color:green;text-align:center">Create a New Blog</h2>
+    <div>
+        <label for="title">Topic of the blog:</label>
+        <br>
+        <input name="title" />
+        <br>
+        <br>
+    </div>
+    <div>
+        <label for="content">Contents of the blog</label>
+        <br>
+        <textarea name="content" rows="5" cols="100"></textarea>
+        <br>
+        <br>
+        <input type="submit" />
+    </div>
+</form>
+{% endblock %}

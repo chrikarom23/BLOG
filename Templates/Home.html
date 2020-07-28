@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <h1 style="color:black;text-align:center;">Le Blog</h1>
+    <p style="color:green;text-align:center">This is a test blogging site created by ChriKaRom23 to learn html and css</p>
+    <label for="postlist">Available posts</label>
+    <ul id="postlist">
+        {% for post_id, post in posts.items() %}
+            <li><a href="{{ url_for('post', post_id = post_id) }}">{{post['title']}}</a></li>
+        {% endfor %}
+    </ul>
+</div><br>
+<a href=" {{url_for('create') }}">Create new blog</a>
+<br>
+{% endblock %}
